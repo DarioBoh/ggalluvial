@@ -165,7 +165,7 @@ data(majors)
 majors$curriculum <- as.factor(majors$curriculum)
 ggplot(majors,
        aes(x = semester, stratum = curriculum, alluvium = student,
-           fill = curriculum, label = curriculum)) +
+           fill = curriculum)) +
   geom_flow(stat = "alluvium", lode.guidance = "rightleft",
             color = "darkgray") +
   geom_stratum() +
